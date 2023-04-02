@@ -1,0 +1,37 @@
+var --> če imaš while(true) znotrej metode in spreminjaš eno spremenljivko, ki je tudi drugje, bo vrednost spremenljivke v metodi povozila druge.
+let --> prepreči gornje
+const --> spreminjanje ni dovoljeno
+
+crke = ["a", "b", "c"]
+
+for (const crka of crke){
+    console.log(crka)
+}
+ of --> elementi
+in --> indeksi
+
+Indeksi in vsebina
+for(const [i,crka] of crke.entries()){
+	console.log(i, ime)
+}
+
+Kratka funkcija
+crke.forEach(crka => console.log(crka.toUpperCase()))
+
+crke.map(crka => crka.toUpperCase())
+crke.filter(crka => crka.includes("a")).map(crka => crka.toUpperCase())
+
+document.querySelector("#first") --> iskanje po id-jih, vrne le prvi rezultat
+
+document.querySelectorAll("input") --> vrne vse rezlutate
+
+const button = document.querySelector("Button") --> sedaj imamo gumb shranjen v spremenljivko
+button.innerText = "Žnj" --> dodelimo nov tekst
+
+button.onClick = () => console.log(this) --> izpiše referenco na kontekst kjer se celotna koda izvaja --> okno brskalnika
+
+button.onClick = function(){
+	console.log(this)
+} --> izpiše referneco na objekt button
+
+window.screen --> naredi podobnu ku () => console.log(this)
